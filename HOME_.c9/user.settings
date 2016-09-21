@@ -7,7 +7,7 @@
         "@displayIndentGuides": true,
         "@fadeFoldWidgets": true,
         "@fontFamily": "Fira Code, Monaco, Menlo, Ubuntu Mono, Consolas, source-code-pro, monospace",
-        "@fontSize": "11.5",
+        "@fontSize": "12",
         "@highlightActiveLine": true,
         "@highlightGutterLine": true,
         "@highlightSelectedWord": true,
@@ -133,7 +133,7 @@
         "@blinking": false,
         "@defaultEnvEditor": false,
         "@fontfamily": "Fira Code, Ubuntu Mono, Menlo, Consolas, monospace",
-        "@fontsize": "11.5",
+        "@fontsize": "12",
         "@foregroundColor": "#000000",
         "@scrollback": 1000,
         "@selectionColor": "#bed1e3"

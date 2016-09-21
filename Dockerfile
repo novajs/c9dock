@@ -15,9 +15,7 @@ libxml2-dev sshfs nano bash
 
 # ------------------------------------------------------------------------------
 # User space installs
-RUN apt-get install -y wget tmux zsh
-RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh; cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc; chsh -s /bin/zsh
-RUN echo "exec zsh" >> /root/.bashrc
+RUN apt-get install -y wget tmux man-db dialog
 
 # Install Node.js
 RUN curl https://cdn.rawgit.com/creationix/nvm/v0.31.7/install.sh | bash
@@ -26,12 +24,12 @@ RUN . ~/.nvm/nvm.sh && nvm install node && nvm alias default node
 
 # ------------------------------------------------------------------------------
 # Install Cloud9
+RUN echo "Installing C9"
 RUN git clone --depth=1  https://github.com/tritonjs/c9.io /cloud9
 WORKDIR /cloud9
 
 # Fetch the latest code, w/ busting cache for new builds.
-RUN _=$(date) git fetch origin
-RUN git pull
+RUN git pull origin master
 
 # Install cloud9 sdk.
 RUN apt-get install -y python
