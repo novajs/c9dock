@@ -29,6 +29,7 @@ RUN git pull origin master; mkdir /workspace
 
 # Install cloud9 sdk.
 RUN . ~/.nvm/nvm.sh; nvm use node; /cloud9/scripts/install-sdk.sh; npm install -g pm2
+RUN curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash
 
 # Tweak standlone.js conf
 RUN sed -i -e 's_127.0.0.1_0.0.0.0_g' /cloud9/configs/standalone.js
