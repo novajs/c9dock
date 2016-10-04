@@ -45,8 +45,6 @@ ADD HOME_.c9/user.settings /root/.c9/user.settings
 EXPOSE 80
 EXPOSE 3000
 
-VOLUME /workspace
-
 # ------------------------------------------------------------------------------
 # Set entrypoint to INIT.
 ENTRYPOINT ["/bin/bash", "--login", "-c", "cd /root; bash fetch-init.sh"]
